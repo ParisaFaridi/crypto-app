@@ -6,7 +6,6 @@ function Search({currency,setCurrency}) {
     const [query,setQuery]=useState("");
 
     useEffect(()=>{
-        console.log(query)
     },[query])
 
   return (

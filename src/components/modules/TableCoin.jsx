@@ -44,12 +44,10 @@ const TableRow = ({coin,setChart}) => {
       try{
         const res = await fetch(getChart(coin.id))
         const json = await res.json();
-        setChart(json);
-        console.log(json);
-      }catch{
-          
+        setChart({...json,coin});
+      }catch(error){
+        setChart(null);
       }
-      setChart(true)
     }
     return (
       <tr>
